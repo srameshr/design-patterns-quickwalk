@@ -57,6 +57,7 @@ The Module Pattern:
 </li>
 <li>The Module pattern encapsulates "privacy", state and organization using closures.</li>
 <li>This gives us a clean solution for shielding logic doing the heavy lifting whilst only exposing an interface we wish other parts of our application to use. </li>
+</ul>
 
 Example
 ```
@@ -86,6 +87,7 @@ testModule.incrementCounter();
 // Check the counter value and reset
 // Outputs: counter value prior to reset: 1
 testModule.resetCounter();
+
 ```
 
 Module Pattern Variations:
@@ -97,6 +99,7 @@ Module Pattern Variations:
 </ul>
 
 <b>Import Mixins</b>
+
   		
   	```
   			var myModule = (function( $, _ ) {
@@ -116,7 +119,9 @@ Module Pattern Variations:
   			})( jQuery, _ );
 
   		```
+
 <b>Exports</b>
+
   		```
   			 // Module object
 			  var module = {},
