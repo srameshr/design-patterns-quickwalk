@@ -123,7 +123,10 @@ Module Pattern Variations:
 <b>Exports</b>
 
   		```
-  			 // Module object
+  			 // Global module
+			var myModule = (function () {
+			 
+			  // Module object
 			  var module = {},
 			    privateVariable = "Hello World";
 			 
@@ -137,5 +140,7 @@ Module Pattern Variations:
 			  };
 			 
 			  return module;
+			 
+			})();
   		```
 
