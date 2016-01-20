@@ -4,11 +4,13 @@ For complete reference, click [here](http://addyosmani.com/resources/essentialjs
 
 In JavaScript, there are several options for implementing modules. These include:
 
-The Module pattern
-Object literal notation
-AMD modules
-CommonJS modules
-ECMAScript Harmony modules
+<ul>
+	<li>The Module pattern</li>
+	<li>Object literal notation</li>
+	<li>AMD modules</li>
+	<li>CommonJS modules</li>
+	<li>ECMAScript Harmony modules</li>
+</ul>
 
 A short refresher about JS object literals:
 <ol>
@@ -31,10 +33,10 @@ var myObjectLiteral = {
 
 ```
 
-Once instantinated, outside of an object, new members may be added to it using assignment as follows myModule.property = "someValue";
+Once instantinated, outside of an object, new members may be added to it using assignment as follows ```myModule.property = "someValue";```
 
 ```
-// To update the above <b>myObjectLiteral</b>
+// To update the above myObjectLiteral
 myObjectLiteral.myKey = 10;
 ```
 Accessing:
@@ -89,8 +91,14 @@ testModule.resetCounter();
 Module Pattern Variations:
 <ul>
   <li>
-  	<b>Import Mixins</b>
-  		```
+  	<b>Import Mixins</b>  
+  </li>
+  <li>Exports</li>
+</ul>
+
+<b>Import Mixins</b>
+  		
+  	```
   			var myModule = (function( $, _ ) {
   				function privateMethod1(){
 			        $(".container").html("test");
@@ -105,11 +113,10 @@ Module Pattern Variations:
 			            privateMethod1();
 			        }
 			    };
-  			})( jQuery, _ )
+  			})( jQuery, _ );
+
   		```
-  </li>
-  <li>
-  	<b>Exports</b>
+<b>Exports</b>
   		```
   			 // Module object
 			  var module = {},
@@ -126,4 +133,4 @@ Module Pattern Variations:
 			 
 			  return module;
   		```
-  </li>
+
